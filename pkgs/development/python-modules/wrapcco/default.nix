@@ -2,7 +2,7 @@
 
 buildPythonPackage rec {
   pname = "wrapcco";
-  version = "0.1.3"; # Update version
+  version = "0.1.3";
   pyproject = true;
 
   src = fetchPypi {
@@ -10,11 +10,8 @@ buildPythonPackage rec {
     hash = "sha256-nts5cujixB+PfAf9Fk7kOXW4BeI/0q5GYTthCI76ZOA=";
   };
 
-  build-system = [ setuptools ]; # Build-time only
-  dependencies = [
-    numpy
-    setuptools
-  ]; # Remove setuptools here unless explicitly needed at runtime
+  build-system = [ setuptools ];
+  dependencies = [ numpy setuptools ];
 
   meta = {
     description = "Supercharge Python with C++ extensions!";
