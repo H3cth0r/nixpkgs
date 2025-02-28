@@ -1,4 +1,10 @@
-{ lib, buildPythonPackage, fetchPypi, numpy, setuptools }:
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  numpy,
+  setuptools,
+}:
 
 buildPythonPackage rec {
   pname = "wrapcco";
@@ -11,7 +17,10 @@ buildPythonPackage rec {
   };
 
   build-system = [ setuptools ];
-  dependencies = [ numpy setuptools ];
+  dependencies = [
+    numpy
+    setuptools
+  ];
 
   meta = {
     description = "Supercharge Python with C++ extensions!";
